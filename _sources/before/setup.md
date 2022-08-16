@@ -1,17 +1,16 @@
 # Setup: how to run the tutorial
 
-This tutorial goal is to provide a wide introduction to the Pangeo ecosystem. 
-While participants will see all the core libraries and possibilities offered by Pangeo software ecosystem, it is also important they get some insights of what is a Pangeo platform and how to use it. 
-This is why we put in place such a platform on top of EOSC federation thanks to CESNET provider. 
-We recommend then running this tutorial using the EOSC/CESNET infrastructure, which is mainly a Dask-gateway enabled Jupyterhub proposing some pre-cooked software environment. 
+This tutorial's goal is to provide a wide introduction to the Pangeo ecosystem. 
+While participants will see all the core libraries and possibilities offered by the Pangeo software ecosystem, it is also important that they get some insights about what a Pangeo platform is and how to use it. 
+This is why we put in place such a platform on top of EOSC federation thanks to provider CESNET. 
+We recommend then running this tutorial using the EOSC/CESNET infrastructure, which is mainly a Dask-gateway enabled Jupyterhub offering some pre-cooked software environment. 
 For more details on this deployment, you may want to take a look at [Daskhub helm chart](https://github.com/dask/helm-chart/tree/main/daskhub).
 
-This pages will describe three ways of running the tutorial:
+This page will describe three ways of running the tutorial:
 
 - Through the provided Pangeo platform deployed on EOSC resources (recommended)
 - Locally on your personal computer
 - Using various Binderhubs solutions
-
 
 ## Running the tutorial on the provided Pangeo platform
 
@@ -19,11 +18,11 @@ First, before the FOSS4G workshop, all the participants will have to create an E
 There are only two simple steps to do:
 
 1. Create an account on the development instance of EGI Check-In, clicking on: https://aai-dev.egi.eu/registry/co_petitions/start/coef:2. You can easily delegate authentication with academic or social account e.g. GitHub.
-1. Enroll the "vo.pangeo.eu" Virtual Organisation by clicking on: https://aai-dev.egi.eu/registry/co_petitions/start/coef:290.
+1. Enroll in the "vo.pangeo.eu" Virtual Organisation by clicking on: https://aai-dev.egi.eu/registry/co_petitions/start/coef:290.
 
-It's important to do these steps as early as possible in order for Virtual Organisation managers to approve your petition to join.
+It is important to perform these steps as early as possible in order for managers of the Virtual Organisation to approve your petition to join.
 
-Once your enrollment to Pangeo VO is validated, just log out from EGI Check-in to refresh your account.
+Once your enrollment to Pangeo VO has been validated, simply log out from EGI Check-in to refresh your account.
 
 :::{note}
 Before the start of the course, you need to register to the Pangeo EGI-ACE EOSC infrastructure.
@@ -41,14 +40,14 @@ Alternatively, you can also open notebooks one by one from the PANGEO 101 sectio
 After the FOSS4G workshop, you can continue to use the resources, but note that we would probably modify the service and things might not work from time to time. 
 We would appreciate you get in touch with us to give us some feedback and be informed of the platform evolution. You can do this through [Github Discussions](https://github.com/pangeo-data/foss4g-2022/discussions).
 
-You can also contribtue to "the Pangeo show and tell" online meetups.
+You can also contribute to "the Pangeo show and tell" online meetups.
 :::
 
 
 ## Running on your own computer
 
-Most part of this tutorial has been designed to run on limited computer resources, so it's fine to run it on your laptop.
-It's a bit more complicated as you'll have to install the software environment yourself. You also wont'be able to test real Cloud distributed processing with Dask gateway.
+Most parts of this tutorial were designed to run with limited computer resources, so it is possible to run on your laptop.
+It is a bit more complicated as you will have to install the software environment yourself. Also you will not be able to test real cloud distributed processing with Dask gateway.
 
 Steps to run this tutorial on your own computer are listed below and demonstrated _through Linux commands only_:
 
@@ -56,7 +55,7 @@ Steps to run this tutorial on your own computer are listed below and demonstrate
 ```bash
 git clone https://github.com/pangeo-data/foss4g-2022.git
 ```
-2. Install the required software environment with Conda. If you don't have Conda, install it by following these instructions (see [here](https://docs.conda.io/en/latest/miniconda.html)). Then create the environment, this can take a few minutes.
+2. Install the required software environment with Conda. If you do not have Conda, install it by following these instructions (see [here](https://docs.conda.io/en/latest/miniconda.html)). Then create the environment, this can take a few minutes.
 ```bash
 conda env create -n pangeo-foss4g -f foss4g-2022/.binder/environment.yml
 ```
@@ -68,16 +67,15 @@ jupyter lab
 4. Open a web browser and connect to the Jupyterlab provided URL (you should see it in the jupyter lab command outputs), something like: http://localhost:8888/lab?token=42fac6733c6854578b981bca3abf5152.
 5. Navigate to foss4g-2022/tutorial/pangeo101/ using the file browser on the left side of the Jupyterlab screen.
 
-
 ## Running using a Binderhub deployment
 
 [Binderhub](https://binderhub.readthedocs.io/en/latest/) is a cloud service that allows users to share reproducible interactive computing environments from code repositories. It is generally used to enable other users to easily run your own code through Jupyter notebooks. 
 It is a really cool service offered for free by several organisations (MyBinder through Jupyter, GESIS, etc.).
 
-It's probably the easiest way to execute notebooks in this repository, as you only have to do one click to arrive in a Jupyterlab with all the necessary libraries.
-However, the hardware resources you'll be allowed to use will be quite small, so you won't be able to grasp the full potential of Pangeo software stack, and some parts of the notebooks will be unavailable.
+It is probably the easiest way to execute notebooks in this repository, as you only have to do one click to arrive in a Jupyterlab with all the necessary libraries.
+However, the hardware resources of the public BinderHub are quite small, so you will not be able to grasp the full potential of the Pangeo software stack, and parts of the notebooks will be unavailable.
 
-All the notebooks on the PANGEO 101 section, for example ["Handling multi-dimensional arrays with xarray"](../pangeo101/xarray_introduction.ipynb) have a rocket icon at the top, from which you can select Binder button to just run this notebook on the [GESIS Binder service](https://notebooks.gesis.org/binder/).
+All the notebooks on the PANGEO 101 section, for example ["Handling multi-dimensional arrays with xarray"](../pangeo101/xarray_introduction.ipynb) have a rocket icon 🚀 at the top, from which you can select the Binder button to just run this notebook on the [GESIS Binder service](https://notebooks.gesis.org/binder/).
 
 Alternatively, you can also directly click on the below buttons:
 
